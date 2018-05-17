@@ -24,18 +24,18 @@ window.toastr.options = {
     showMethod: "fadeIn",
     hideMethod: "fadeOut"
 };
-
-Vue.prototype.remove = function (arr, item){
-    var result=[];  
-    for(var i=0; i<arr.length; i++){  
-    if(arr[i]!=item){  
-        result.push(arr[i]);  
-        //console.log(result);
-        // console.log("itemid"+item);
-        }  
-    };  
- return result;  
-}
+// 以下为注册的全局方法
+// Vue.prototype.remove = function (arr, item){
+//     var result=[];  
+//     for(var i=0; i<arr.length; i++){  
+//     if(arr[i]!=item){  
+//         result.push(arr[i]);  
+//         //console.log(result);
+//         // console.log("itemid"+item);
+//         }  
+//     };  
+//  return result;  
+// }
 
 Vue.use(VueRouter);
 

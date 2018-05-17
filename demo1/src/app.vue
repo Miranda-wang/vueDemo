@@ -2,7 +2,7 @@
     <div>
         {{msg}}
           <ul>
-            <li v-for="(item,index) in todos" v-on:click="click(index,item.id)" :class="[item.isSelected?'clicked unclicked':'unclicked']"><span :id="item.id">{{item.text}}</span></li>
+            <li v-for="(item,index) in todos" v-on:click="selectTag(index,item.id)" :class="[item.isSelected?'clicked unclicked':'unclicked']"><span :id="item.id">{{item.text}}</span></li>
         </ul>
         
     </div>
@@ -40,7 +40,7 @@
                     }
                     return result;   
             },
-            click:function (index,itemId) {
+            selectTag:function (index,itemId) {
                 // 选中状态,长度<3
                 //     添加点击背景效果,
                 //     存储点击数据
